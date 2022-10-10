@@ -2,7 +2,7 @@
 <#import "parts/login.ftlh" as login>
 
 <@common.page>
-Добавить новго сотрудника
+<div class="mb-1"> Добавить нового сотрудника</div>
 ${message?if_exists}
-<@login.login "/registration"/>
+<@login.login "/registration" true />
 </@common.page>

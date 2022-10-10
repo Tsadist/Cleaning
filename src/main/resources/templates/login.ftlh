@@ -2,7 +2,5 @@
 <#import "parts/login.ftlh" as login>
 
 <@common.page>
-Страница регистрации
-    <@login.login "/login" />
-    <a href="/registration">Добавить нового сотрудника</a>
+    <@login.login "/login" false/>
 </@common.page>
