@@ -3,6 +3,6 @@
 
 <@common.page>
 <div class="mb-1"> Добавить нового сотрудника</div>
-${message?if_exists}
-<@login.login "/registration" true />
+    ${message?if_exists}
+    <@login.login "/registration" true/>
 </@common.page>

@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <#if !isRegisterForm>
+        <#if isRegisterForm>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label"> Email: </label>
             <div class="col-sm-6">
@@ -22,7 +22,6 @@
             </div>
         </div>
         </#if>
-
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
         <#if !isRegisterForm><a href="/registration">Добавить нового сотрудника</a></#if>
         <button class="btn btn-primary" type="submit">
