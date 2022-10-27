@@ -3,7 +3,6 @@ package com.example.demo.controller;
 import com.example.demo.domain.Message;
 import com.example.demo.domain.User;
 import com.example.demo.repository.MessageRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -21,14 +20,17 @@ import java.util.UUID;
 @Controller
 
 public class MainController {
-	@Autowired
-	private MessageRepo messageRepo;
+	private final MessageRepo messageRepo;
 
 	@Value("${upload.path}")
 	private String uploadPath;
 
+	public MainController(MessageRepo messageRepo) {
+		this.messageRepo = messageRepo;
+	}
+
 	@GetMapping("/")
-	public String greeting(Map <String, Object> model) {
+	public String greeting() {
 		return "greeting";
 	}
 

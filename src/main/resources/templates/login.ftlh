@@ -2,6 +2,6 @@
 <#import "parts/login.ftlh" as login>
 
 <@common.page>
-    ${message?if_exists}
+    ${message!}
     <@login.login "/login" false/>
 </@common.page>

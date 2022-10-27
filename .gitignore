@@ -36,3 +36,4 @@ mvnw
 mvnw.cmd
 .mvn
 pom.xml
+application.properties

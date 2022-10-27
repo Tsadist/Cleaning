@@ -5,7 +5,9 @@
 <div class="form-row">
     <div class="form-group col-md-6">
         <form method="get" action="/main" class="form-inline">
-            <input type="text" name="filter" value="${filter?ifExists}" placeholder="Search by year">
+            <label>
+                <input type="text" name="filter" value="${filter!}" placeholder="Search by name">
+            </label>
             <button type="submit" class="btn btn-primary ml-2">Найти сотрудника</button>
         </form>
     </div>
@@ -19,10 +21,14 @@
     <div class="form-group mt-3">
         <form method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <input type="text" class="form-control" name="name" placeholder="Имя"/>
+                <label>
+                    <input type="text" class="form-control" name="name" placeholder="Имя"/>
+                </label>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="tag" placeholder="Год рождения"/>
+                <label>
+                    <input type="text" class="form-control" name="tag" placeholder="Год рождения"/>
+                </label>
             </div>
             <div class="form-group">
                 <div class="custom-file">
@@ -42,7 +48,7 @@
     <#list messages as message>
     <div class="card my-3">
         <#if message.filename??>
-            <img src="/img/${message.filename}" class="card-img-top">
+            <img src="/img/${message.filename}" class="card-img-top" alt="">
         </#if>
 
         <div class="m-2">

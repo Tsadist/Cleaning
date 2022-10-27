@@ -4,7 +4,9 @@
     Изменение прав сотрудников
 
     <form action="/user" method="post">
-        <input type="text" name="username" value="${user.username}">
+        <label>
+            <input type="text" name="username" value="${user.username}">
+        </label>
         <#list roles as role>
             <div>
                 <label>
